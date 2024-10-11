@@ -23,6 +23,8 @@ class ADPhaseRetireval:
     def __init__(self, amp, amp_dx, efl, wvl, basis, target, img_dx, defocus_waves=0, initial_phase=None):
         if initial_phase is None:
             phs = np.zeros(amp.shape, dtype=float)
+        else:
+            phs = initial_phase
 
         self.amp = amp
         self.amp_select = self.amp > 1e-9
